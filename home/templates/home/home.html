@@ -1,0 +1,75 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block title %}Bienvenue sur mon Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Section Intro -->
+    <div class="row">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <!-- Your Profile Picture -->
+            <div class="profile-img-container text-center">
+                <img src="{% static 'images/dhia.jpg' %}" alt="Ma Photo" class="img-fluid rounded-circle shadow-lg" width="250">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1 class="display-4 text-center text-md-start text-primary">Bonjour, je suis <span class="text-success">Dhia Fennira</span></h1>
+            <p class="lead text-center text-md-start">Développeur Web passionné, spécialisé dans Django et Python. Bienvenue sur mon portfolio où vous pourrez découvrir mes projets, mon parcours et bien plus encore !</p>
+            <div class="text-center text-md-start">
+                <a href="#about-me" class="btn btn-primary btn-lg me-3">En savoir plus</a>
+                <a href="{% url 'cv' %}" class="btn btn-outline-success btn-lg">Mon CV</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section About Me -->
+    <div id="about-me" class="row mt-5">
+        <div class="col-12">
+            <h2 class="section-title text-center mb-4">À propos de moi</h2>
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <p class="card-text">Je suis un développeur web basé en Tunisie, passionné par la création de solutions efficaces et performantes. J’ai une expertise en Django, Python, ainsi qu'en développement frontend avec HTML, CSS et JavaScript. J'aime travailler sur des projets complexes et offrir des solutions innovantes pour des résultats impressionnants.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Services -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h2 class="section-title text-center mb-4">Mes Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow-lg">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Service 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Développement Backend</h5>
+                            <p class="card-text">Création de solutions robustes et performantes avec Django et Python.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-lg">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Service 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Développement Frontend</h5>
+                            <p class="card-text">Création d'interfaces utilisateurs modernes et réactives avec HTML, CSS, et JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-lg">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Service 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Consultation et Formation</h5>
+                            <p class="card-text">Offre de services de consultation et de formation sur Django et le développement web.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
